@@ -28,8 +28,8 @@ abstract class AbstractResizer {
             $thmbWidth = $thmbHeight = $imgHeight;
         }
         return array(
-            'Start X' => $imgWidth - $gutterX,
-            'Start Y' => $imgWidth - $gutterY,
+            'Start X' => $gutterX,
+            'Start Y' => $gutterY,
             'Thmb W' => $thmbWidth,
             'Thub H' => $thmbHeight
         );
