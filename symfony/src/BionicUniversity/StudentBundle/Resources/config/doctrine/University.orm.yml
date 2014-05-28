@@ -10,7 +10,6 @@ BionicUniversity\StudentBundle\Entity\University:
     fields:
         fullName:
             type: string
-            length: 255
         shortName:
             type: string
             length: '15'
@@ -18,4 +17,8 @@ BionicUniversity\StudentBundle\Entity\University:
             type: smallint
         yearOfFoundation:
             type: datetime
+    oneToMany:
+        faculties:
+            targetEntity: BionicUniversity\StudentBundle\Entity\Faculty
+            mappedBy: university
     lifecycleCallbacks: {  }

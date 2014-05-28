@@ -34,6 +34,29 @@ class University
      */
     private $yearOfFoundation;
 
+    /**
+     * @var Faculty
+     */
+    private $faculties;
+
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+
+        return $this->shortName;
+
+    }
+
+    /**
+     * @return Faculty
+     */
+    public function getFaculties()
+   {
+       return $this->faculties;
+   }
+
 
     /**
      * Get id
