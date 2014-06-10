@@ -14,5 +14,5 @@ namespace BionicUniversity\BogdanKolesnyk\HomeWork\Builder;
  */
 interface BuilderInterface {
 	public function setGivenMaterials();
-	public function buildHouse();
+	public function buildHouse(array $materials, \HouseInterface $blueprint);
 }
