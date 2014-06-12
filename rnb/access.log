@@ -1,0 +1,2 @@
+127.0.0.1 - - [12/Jun/2014:15:54:36 +0300] "GET / HTTP/1.1" 200 5700 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/34.0.1847.116 Chrome/34.0.1847.116 Safari/537.36"
+127.0.0.1 - - [12/Jun/2014:15:54:36 +0300] "GET /favicon.ico HTTP/1.1" 200 0 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/34.0.1847.116 Chrome/34.0.1847.116 Safari/537.36"
