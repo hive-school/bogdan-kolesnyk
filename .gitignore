@@ -1,6 +1,7 @@
 /.idea
 /bootstrap/compiled.php
 /vendor
+/public/src/vendor
 bionic.dev.access.log
 bionic.dev.error.log
 composer.phar

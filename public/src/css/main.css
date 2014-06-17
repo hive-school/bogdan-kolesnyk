@@ -1,0 +1,33 @@
+html, body {
+    height: 100%;
+}
+
+/*****************************************
+**            Sticky footer             **
+******************************************/
+
+.full-height {
+    min-height: 100%;
+    margin-bottom: -50px;
+}
+
+.full-height:after {
+    content: "";
+    display: block;
+}
+
+.sticky-footer, .full-height:after {
+    height: 50px;
+}
+
+/*****************************************
+**                 ID's                 **
+******************************************/
+#loader {
+    background-color: rgba(255, 255, 255, 0.6);
+    background-image: ;
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+    z-index: 10000;
+}
