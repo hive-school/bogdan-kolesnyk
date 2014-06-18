@@ -53,6 +53,7 @@
         <div class="sticky-footer container-fluid">
             Footer
         </div>
+        <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script src="src/vendor/underscore/underscore.js"></script>
         <script src="src/vendor/jquery/dist/jquery.min.js"></script>
         <script src="src/vendor/bootstrap/dist/js/bootstrap.min.js"></script>

@@ -1,5 +1,8 @@
 html, body {
     height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    padding: 0;
 }
 
 /*****************************************
@@ -24,10 +27,23 @@ html, body {
 **                 ID's                 **
 ******************************************/
 #loader {
-    background-color: rgba(255, 255, 255, 0.6);
-    background-image: ;
+    background-color: rgba(0, 0, 0, 0.3);
     min-height: 100%;
     min-width: 100%;
     position: absolute;
     z-index: 10000;
+}
+#loader:after {
+    background-image: url(../img/loader.gif);
+    border-radius: 15px;
+    box-shadow: 0 0 10px #000000;
+    content: "";
+    display: block;
+    height: 350px;
+    left: 50%;
+    margin-left: -153px;
+    margin-top: -175px;
+    position: absolute;
+    top: 50%;
+    width: 305px;
 }

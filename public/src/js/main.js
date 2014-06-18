@@ -1,3 +1,7 @@
-/**
- * Created by BGDN on 18.06.14.
- */
+LOADER = function(){
+    return $('#loader').fadeToggle("fast", "swing");
+};
+
+$(function(){
+
+});
