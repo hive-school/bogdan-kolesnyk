@@ -6,6 +6,8 @@
         "jquery"        : "latest",
         "underscore"    : "latest",
         "knockoutjs"    : "latest",
-        "cryptico"      : "latest"
+        "cryptico"      : "latest",
+        "tinymce"       : "latest",
+        "fontawesome"   : "latest"
     }
 }

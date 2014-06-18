@@ -3,5 +3,8 @@ LOADER = function(){
 };
 
 $(function(){
-
+    LOADER();
+    tinymce.init({
+        selector: '.wysiwyg'
+    });
 });

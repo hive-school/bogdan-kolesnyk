@@ -33,6 +33,13 @@ html, body {
     position: absolute;
     z-index: 10000;
 }
+#loader i {
+    display: block;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+}
+/*
 #loader:after {
     background-image: url(../img/loader.gif);
     border-radius: 15px;
@@ -47,3 +54,4 @@ html, body {
     top: 50%;
     width: 305px;
 }
+*/
