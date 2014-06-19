@@ -5,6 +5,9 @@ LOADER = function(){
 $(function(){
     LOADER();
     tinymce.init({
-        selector: '.wysiwyg'
+        selector: '.wysiwyg',
+        menubar: false,
+        statusbar: false,
+        height: 300
     });
 });

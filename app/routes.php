@@ -11,8 +11,7 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('sendMsg');
-});
+Route::get('/', 'UserController@login');
+Route::get('contacts', 'UserController@contacts');
+Route::get('messages', 'MessageController@messageList');
 
