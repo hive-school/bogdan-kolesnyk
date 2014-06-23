@@ -11,5 +11,8 @@ class UserController extends BaseController {
     {
         return View::make('user.contacts');
     }
-
+    public function register()
+    {
+        return View::make('user.register');
+    }
 }

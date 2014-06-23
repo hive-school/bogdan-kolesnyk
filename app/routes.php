@@ -18,4 +18,5 @@ Route::get('create', 'MessageController@create');
 Route::get('/message/{id?}', 'MessageController@show');
 Route::get('login', 'UserController@login');
 Route::get('contacts', 'UserController@contacts');
+Route::get('registration', 'UserController@register');
 
