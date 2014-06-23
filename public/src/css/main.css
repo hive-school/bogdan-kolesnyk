@@ -1,9 +1,13 @@
+* {
+    outline: none !important;
+}
 html, body {
     background-color: #fefefe;
     height: 100%;
 }
 body {
-    margin-top: 15px;
+    background-image: url(../img/bg.png);
+    padding-top: 15px;
 }
 textarea {
     resize: vertical;
@@ -30,6 +34,9 @@ textarea {
 **                 ID's                 **
 ******************************************/
 
+#encryptedMsgPreview {
+    word-break: break-all;
+}
 #loader {
     background-color: rgba(0, 0, 0, 0.3);
     min-height: 100%;

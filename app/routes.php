@@ -11,8 +11,11 @@
 |
 */
 
-Route::get('/', 'MessageController@showAll');
-Route::get('/message/{id?}', 'MessageController@showMessage');
+Route::get('messages', 'MessageController@showAll');
+Route::get('messages/received', 'MessageController@showReceived');
+Route::get('messages/sent', 'MessageController@showSent');
+Route::get('create', 'MessageController@create');
+Route::get('/message/{id?}', 'MessageController@show');
 Route::get('login', 'UserController@login');
 Route::get('contacts', 'UserController@contacts');
 

@@ -11,7 +11,10 @@
                 <div class="panel-body">
                     <div class="form-group">
                         <label class="control-label">Private key:</label>
-                        <textarea class="form-control" cols="3"></textarea>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-key"></i></span>
+                            <input type="text" class="form-control"></input>
+                        </div>
                     </div>
                     <a href="#" class="btn btn-success pull-right">
                         <i class="fa fa-unlock"></i>&nbsp;Decrypt
@@ -25,9 +28,12 @@
                 <article class="panel-body">
 
                 </article>
-                <footer class="panel-footer">
+                <footer class="panel-footer text-right">
                     <a href="#" class="btn btn-primary">
                         <i class="fa fa-reply"></i>&nbsp;Reply
+                    </a>
+                    <a href="#" class="btn btn-danger">
+                        <i class="fa fa-trash-o"></i>&nbsp;Delete
                     </a>
                 </footer>
             </section>

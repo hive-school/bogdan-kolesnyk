@@ -11,14 +11,20 @@ class MessageController extends BaseController {
     public function showAll() {
         return View::make('message.showAll');
     }
+
     public function showReceived() {
         return View::make('message.showAll');
     }
+
     public function showSent() {
         return View::make('message.showAll');
     }
-    public function showMessage($id=null) {
 
+    public function show($id=null) {
         return View::make('message.show');
+    }
+
+    public function create() {
+        return View::make('message.create');
     }
 } 
