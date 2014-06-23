@@ -8,7 +8,17 @@
 
 class MessageController extends BaseController {
 
-    public function messageList() {
-        return View::make('message.list');
+    public function showAll() {
+        return View::make('message.showAll');
+    }
+    public function showReceived() {
+        return View::make('message.showAll');
+    }
+    public function showSent() {
+        return View::make('message.showAll');
+    }
+    public function showMessage($id=null) {
+
+        return View::make('message.show');
     }
 } 

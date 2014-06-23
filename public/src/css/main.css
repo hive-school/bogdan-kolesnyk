@@ -1,12 +1,13 @@
 html, body {
-    background-color: #fafafa;
+    background-color: #fefefe;
     height: 100%;
 }
 body {
     margin-top: 15px;
 }
-
-
+textarea {
+    resize: vertical;
+}
 /*****************************************
 **            Sticky footer             **
 ******************************************/
@@ -28,6 +29,7 @@ body {
 /*****************************************
 **                 ID's                 **
 ******************************************/
+
 #loader {
     background-color: rgba(0, 0, 0, 0.3);
     min-height: 100%;
@@ -44,7 +46,7 @@ body {
     top: 50%;
 }
 #sidebarMenu {
-    background-color: #e5e5e5;
+    background-color: #f5f5f5;
     padding-bottom: 15px;
 }
 #username {
@@ -54,15 +56,47 @@ body {
 #sidebarMenu li span, #username span {
     margin-left: 15px;
 }
-#userMessagesMain li:hover{
+.message-del-btn {
+    margin-top: 8px;
+}
+.message-row:hover {
     background-color: #eaeaea !important;
 }
-#userMessagesMain li:nth-child(even){
+.message-row:hover h4{
+    margin-left: 0px;
+}
+.message-row:hover .message-title .fa{
+    color: inherit;
+    margin-right: 10px;
+}
+.message-row:nth-child(even){
     background-color: #f5f5f5;
+}
+.message-row a {
+    text-decoration: none;
+}
+.message-row h4 {
+    height: 20px;
+    overflow: hidden;
+    margin-left: -18px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    -webkit-transition: margin-left 0.5s;-moz-transition: margin-left 0.5s;-ms-transition: margin-left 0.5s;-o-transition: margin-left 0.5s;transition: margin-left 0.5s;
+}
+.message-title .fa {
+    color: transparent;
+    display: inline-block;
+    margin-right: 0;
+    -webkit-transition: all 0.5s;-moz-transition: all 0.5s;-ms-transition: all 0.5s;-o-transition: color 0.5s;transition: all 0.5s;
 }
 /*****************************************
 **           Bootstrap fixes            **
 ******************************************/
+
+li .btn-group-sm {
+    margin-top: 4px;
+}
 
 .btn {
     outline: none !important;
@@ -71,6 +105,12 @@ body {
     max-width: none;
     width: 100%;
 }
-li .btn-group-sm {
-    margin-top: 4px;
+.no-bottom-padding {
+    padding-bottom: 0;
+}
+.no-bottom-margin {
+    margin-bottom: 0;
+ }
+.no-top-padding {
+    padding-top: 0;
 }

@@ -11,7 +11,8 @@
 |
 */
 
-Route::get('/', 'UserController@login');
+Route::get('/', 'MessageController@showAll');
+Route::get('/message/{id?}', 'MessageController@showMessage');
+Route::get('login', 'UserController@login');
 Route::get('contacts', 'UserController@contacts');
-Route::get('messages', 'MessageController@messageList');
 
