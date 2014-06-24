@@ -29,8 +29,8 @@
                                     </div>
                                 </div>
                                 <div class="form-group col-xs-12">
-                                    <button type="button" class="btn btn-default">Register</button>
-                                    <button type="submit" class="btn btn-success pull-right">Login</button>
+                                    <a href="{{ asset('register') }}" class="btn btn-default">Register</a>
+                                    <button type="submit" class="btn btn-success pull-right">Login&nbsp;<i class="fa fa-sign-in"></i></button>
                                 </div>
                             </div>
                         </div>

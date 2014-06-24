@@ -3,6 +3,6 @@ $(function(){
         selector: '.wysiwyg',
         menubar: false,
         statusbar: false,
-        height: 300,
+        height: 300
     });
 });

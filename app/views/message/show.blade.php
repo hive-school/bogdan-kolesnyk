@@ -23,10 +23,10 @@
             </section>
             <section class="panel panel-default">
                 <header class="panel-heading">
-                    <h1 class="panel-title">Message title</h1>
+                    <h1 class="panel-title">{{ $message->subject }}</h1>
                 </header>
                 <article class="panel-body">
-
+                    {{ $message->text }}
                 </article>
                 <footer class="panel-footer text-right">
                     <a href="#" class="btn btn-primary">

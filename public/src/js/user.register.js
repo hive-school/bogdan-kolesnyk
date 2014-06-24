@@ -1,6 +1,7 @@
 $(function(){
     var dfd = $.Deferred(),
         keygenBtn = $('#keygenBtn'),
+        submitBtn = $('#submitBtn'),
         copyBtn = $('#copyBtn'),
         keyword = '',
         bits = 1024,
@@ -16,6 +17,7 @@ $(function(){
         generateKeys().done(function(){
             LOADER();
             copyBtn.removeAttr('disabled');
+            submitBtn.removeAttr('disabled');
         });
     });
 

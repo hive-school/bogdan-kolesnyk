@@ -8,7 +8,9 @@
 
 class message extends Eloquent {
 
-    public function author () {
+    protected $table = 'messages';
+
+    public function author() {
         return $this->belongsTo('User', 'from');
     }
 

@@ -77,7 +77,7 @@
                                 <span class="help-block text-danger text-center">Save your private key and do not show to anyone!</span>
                             </div>
                             <div class="form-group col-xs-12">
-                                <button type="submit" class="btn btn-success pull-right" disabled>Register&nbsp;<i class="fa fa-arrow-right"></i></button>
+                                <button type="submit" class="btn btn-success pull-right" id="submitBtn" disabled>Register&nbsp;<i class="fa fa-arrow-right"></i></button>
                             </div>
                         </div>
                     </div>

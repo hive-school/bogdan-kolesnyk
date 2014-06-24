@@ -9,8 +9,9 @@ class MessageController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
-        return 'Showing all';
+		$messages = Message::all();
+        //return $messages;
+        return View::make('message.showAll')->withMessages($messages);
 	}
 
 
@@ -22,6 +23,7 @@ class MessageController extends \BaseController {
 	public function create()
 	{
 		//
+        return View::make('message.create');
 	}
 
 
@@ -44,9 +46,9 @@ class MessageController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+		$message = Message::find($id);
+        return View::make('message.show')->withMessage($message);
 	}
-
 
 	/**
 	 * Show the form for editing the specified resource.

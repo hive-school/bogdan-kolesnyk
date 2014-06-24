@@ -45,12 +45,12 @@
                     </article>
                     <footer class="panel-footer">
                         <div class="row">
-                            <div class="col-xs-4">
+                            <div class="col-xs-3">
                                 <button type="reset" class="btn btn-default">
                                     <i class="fa fa-undo"></i>&nbsp;Reset
                                 </button>
                             </div>
-                            <div class="col-xs-8 text-right">
+                            <div class="col-xs-9 text-right">
                                 <a href="#" class="btn btn-info">
                                     <i class="fa fa-eye"></i>&nbsp;Preview
                                 </a>
@@ -64,4 +64,8 @@
         </main>
     </div>
 </section>
+@stop
+
+@section('scripts')
+    <script src="{{ asset('src/js/message.create.js') }}"></script>
 @stop

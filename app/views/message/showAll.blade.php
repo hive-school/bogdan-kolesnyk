@@ -13,19 +13,19 @@
                 </header>
                 <article class="panel-body no-top-padding no-bottom-padding">
                     <ul class="list-unstyled no-bottom-margin">
-
+                        @foreach ($messages as $message)
                         <li class="row message-row">
-                            <a href="#" class="col-xs-10">
+                            <a href="{{ asset('message/'.$message->id) }}" class="col-xs-10">
                                 <h4 class="message-title">
                                     <i class="fa fa-arrow-circle-right"></i>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    {{ $message->subject }}
                                 </h4>
                             </a>
                             <div class="col-xs-2 text-right message-del-btn">
-                                <a class="btn btn-xs btn-danger"><i class="fa fa-trash-o"></i><span class="hidden-xs">&nbsp;Del<span class="hidden-sm">ete</span></span></a>
+                                <a href="{{ asset('message/delete/'.$message->id) }}" class="btn btn-xs btn-danger"><i class="fa fa-trash-o"></i><span class="hidden-xs">&nbsp;Del<span class="hidden-sm">ete</span></span></a>
                             </div>
                         </li>
-
+                        @endforeach
                     </ul>
                 </article>
                 <footer class="panel-footer">
