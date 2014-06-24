@@ -20,7 +20,8 @@ class UserController extends \BaseController {
 	 */
 	public function create()
 	{
-		return View::make('user.register');
+
+		return View::make('user.create');
 	}
 
 

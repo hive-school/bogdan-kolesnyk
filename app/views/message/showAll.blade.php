@@ -15,8 +15,8 @@
                     <ul class="list-unstyled no-bottom-margin">
                         @foreach ($messages as $message)
                         <li class="row message-row">
-                            <a href="{{ asset('message/'.$message->id) }}" class="col-xs-10">
-                                <h4 class="message-title">
+                            <a href="{{ asset('message/'.$message->id) }}" class="col-xs-10 ">
+                                <h4 class="message-title text-primary">
                                     <i class="fa fa-arrow-circle-right"></i>
                                     {{ $message->subject }}
                                 </h4>
@@ -28,9 +28,6 @@
                         @endforeach
                     </ul>
                 </article>
-                <footer class="panel-footer">
-                    Tttt
-                </footer>
             </section>
         </main>
     </div>

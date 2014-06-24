@@ -10,12 +10,22 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
-Route::get('/', 'MessageController@index');
-Route::get('login', 'UserController@login');
-Route::get('logout', 'UserController@logout');
-Route::get('register', 'UserController@create');
 
-Route::resource('user', 'UserController');
-Route::resource('message', 'MessageController');
-Route::resource('connection', 'ConnectionController');
+
+Route::group(['before' => 'guest'], function(){
+    Route::get('login', 'SessionController@create');
+    Route::resource('session', 'SessionController');
+    Route::get('register', 'UserController@create');
+});
+Route::group(['before' => 'auth'], function(){
+    Route::get('logout', 'SessionController@destroy');
+    Route::get('/', 'MessageController@index');
+    Route::get('contacts', 'ContactController@index');
+    Route::get('settings', 'UserController@index');
+    Route::resource('user', 'UserController');
+    Route::resource('message', 'MessageController');
+    Route::resource('contact', 'ContactController');
+});
+
+
 
