@@ -6,6 +6,14 @@
  * Time: 23:37
  */
 
-class Connection {
+class Connection extends Eloquent {
 
-} 
+    public function inviter () {
+        return $this->belongsTo('User', 'inviter');
+    }
+
+    public function invitee() {
+        return $this->belongsTo('User', 'invitee');
+    }
+
+}

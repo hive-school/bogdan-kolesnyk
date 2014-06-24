@@ -112,6 +112,9 @@ li .btn-group-sm {
     max-width: none;
     width: 100%;
 }
+.top-padding {
+    padding-top: 15px;
+}
 .no-bottom-padding {
     padding-bottom: 0;
 }

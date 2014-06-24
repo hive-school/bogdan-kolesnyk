@@ -1,30 +1,87 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: bgdn
- * Date: 6/19/14
- * Time: 1:44 PM
- */
 
-class MessageController extends BaseController {
+class MessageController extends \BaseController {
 
-    public function showAll() {
-        return View::make('message.showAll');
-    }
+	/**
+	 * Display a listing of the resource.
+	 *
+	 * @return Response
+	 */
+	public function index()
+	{
+		//
+        return 'Showing all';
+	}
 
-    public function showReceived() {
-        return View::make('message.showAll');
-    }
 
-    public function showSent() {
-        return View::make('message.showAll');
-    }
+	/**
+	 * Show the form for creating a new resource.
+	 *
+	 * @return Response
+	 */
+	public function create()
+	{
+		//
+	}
 
-    public function show($id=null) {
-        return View::make('message.show');
-    }
 
-    public function create() {
-        return View::make('message.create');
-    }
-} 
+	/**
+	 * Store a newly created resource in storage.
+	 *
+	 * @return Response
+	 */
+	public function store()
+	{
+		//
+	}
+
+
+	/**
+	 * Display the specified resource.
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	public function show($id)
+	{
+		//
+	}
+
+
+	/**
+	 * Show the form for editing the specified resource.
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	public function edit($id)
+	{
+		//
+	}
+
+
+	/**
+	 * Update the specified resource in storage.
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	public function update($id)
+	{
+		//
+	}
+
+
+	/**
+	 * Remove the specified resource from storage.
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	public function destroy($id)
+	{
+		//
+	}
+
+
+}

@@ -6,6 +6,13 @@
  * Time: 23:37
  */
 
-class message {
+class message extends Eloquent {
 
+    public function author () {
+        return $this->belongsTo('User', 'from');
+    }
+
+    public function receiver() {
+        return $this->belongsTo('User', 'to');
+    }
 } 
