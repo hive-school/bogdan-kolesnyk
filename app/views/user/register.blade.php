@@ -22,7 +22,7 @@
                                 </div>
                             </div>
                             <div class="form-group col-xs-12 col-sm-6 col-md-3">
-                                <label class="control-label">Username:</label>
+                                <label class="control-label" >Username:</label>
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-user"></i></span>
                                     <input type="text" class="form-control" name="username" value="" placeholder="Username" required>
@@ -47,9 +47,9 @@
                                     Key word:
                                 </label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" value="" placeholder="Key word" required>
+                                    <input type="text" class="form-control" value="" placeholder="Key word" id="keyword">
                                     <span class="input-group-btn">
-                                        <button type="button" class="btn btn-default">
+                                        <button type="button" class="btn btn-default" id="keygenBtn">
                                             <span class="hidden-xs hidden-sm">Generate keys</span>
                                             <span class="visible-xs visible-sm">Keygen</span>
                                         </button>
@@ -60,16 +60,16 @@
                                 <label class="control-label">
                                     Public key:
                                 </label>
-                                <input type="text" class="form-control" value="" placeholder="Public key" required readonly>
+                                <input type="text" class="form-control" value="" placeholder="Public key" id="publicKey" name="publicKey" required readonly>
                             </div>
                             <div class="form-group col-xs-12 no-bottom-margin">
                                 <label class="control-label">
                                     Private key:
                                 </label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Private key" readonly>
+                                    <input type="text" class="form-control" placeholder="Private key" id="privateKey" readonly>
                                     <span class="input-group-btn">
-                                        <button type="button" class="btn btn-default" disabled>
+                                        <button type="button" class="btn btn-default" id="copyBtn" disabled>
                                             <i class="fa fa-clipboard"></i>&nbsp;Copy<span class="hidden-xs hidden-sm">&nbsp;to clipboard</span>
                                         </button>
                                     </span>
@@ -86,4 +86,9 @@
         </div>
     </main>
 </section>
+@stop
+
+@section('scripts')
+    <script src="{{ asset('src/vendor/cryptico/cryptico.min.js') }}"></script>
+    <script src="{{ asset('src/js/user.register.js') }}"></script>
 @stop

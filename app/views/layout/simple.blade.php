@@ -8,12 +8,11 @@
         <link rel="stylesheet" href="{{ asset('src/css/main.css') }}">
     </head>
     <body>
+        <div id="loader"><i class="fa fa-cog fa-5x fa-spin"></i></div>
         @yield('main')
-        <script src="{{ asset('src/vendor/underscore/underscore.js') }}"></script>
         <script src="{{ asset('src/vendor/jquery/dist/jquery.min.js') }}"></script>
         <script src="{{ asset('src/vendor/bootstrap/dist/js/bootstrap.min.js') }}"></script>
-        <script src="{{ asset('src/vendor/cryptico/cryptico.min.js') }}"></script>
-        <script src="{{ asset('src/vendor/tinymce/tinymce.min.js') }}"></script>
         <script src="{{ asset('src/js/main.js') }}"></script>
+        @yield('scripts')
     </body>
 </html>

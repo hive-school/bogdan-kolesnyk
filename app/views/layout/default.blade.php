@@ -18,11 +18,10 @@
         </div>
 
 
-        <script src="{{ asset('src/vendor/underscore/underscore.js') }}"></script>
         <script src="{{ asset('src/vendor/jquery/dist/jquery.min.js') }}"></script>
         <script src="{{ asset('src/vendor/bootstrap/dist/js/bootstrap.min.js') }}"></script>
-        <script src="{{ asset('src/vendor/cryptico/cryptico.min.js') }}"></script>
         <script src="{{ asset('src/vendor/tinymce/tinymce.min.js') }}"></script>
         <script src="{{ asset('src/js/main.js') }}"></script>
+        @yield('scripts')
     </body>
 </html>

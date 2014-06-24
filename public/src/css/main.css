@@ -108,6 +108,9 @@ li .btn-group-sm {
 .btn {
     outline: none !important;
 }
+.info-popup {
+    cursor: pointer;
+}
 .img-responsive {
     max-width: none;
     width: 100%;
