@@ -32,7 +32,26 @@ class UserController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+        $validation = Validator::make(Input::all(), [
+            'username' => 'required | min:6',
+            'password' => 'required | min:6',
+            'passwordConfirmation' => 'same:password',
+            'email' => 'required | email | unique:users',
+            'publicKey' => 'required'
+        ]);
+        if ($validation->fails()) {
+            Input::flashOnly('publicKey');
+            return Redirect::back()->withInput()->withErrors($validation->messages());
+        }
+
+        User::create([
+            'username' => Input::get('username'),
+            'email' => Input::get('email'),
+            'password' => Hash::make(Input::get('password')),
+            'public_key' => Input::get('publicKey')
+        ]);
+
+        return Redirect::to('/');
 	}
 
 

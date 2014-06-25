@@ -4,7 +4,7 @@
 <section class="container" id="UserLoginMain">
     <main class="row">
         <div class="col-xs-12 col-lg-10 col-lg-offset-1">
-            {{ Form::open(['route' => 'session.store']) }}
+            {{ Form::open(['route' => 'user.store']) }}
                 <header class="text-center">
                     <img alt="Read'n'Burn" src="src/img/logo.png">
                 </header>
@@ -18,30 +18,36 @@
                                 {{ Form::label('email', 'Email:', ['class' => 'control-label']) }}
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                                    {{ Form::email('email', null, ['class' => 'form-control', 'placeholder' => 'email@example.com', 'required' => 'required']) }}
+                                    {{ Form::email('email', null, ['class' => 'form-control', 'placeholder' => 'email@example.com']) }}
                                 </div>
+                                {{ $errors->first('email', '<span class="help-block text-danger no-bottom-margin">:message</span>') }}
                             </div>
                             <div class="form-group col-xs-12 col-sm-6 col-md-3">
                                 {{ Form::label('username', 'Username:', ['class' => 'control-label']) }}
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                                    {{ Form::text('username', null, ['class' => 'form-control', 'placeholder' => 'Username', 'required' => 'required']) }}
+                                    {{ Form::text('username', null, ['class' => 'form-control', 'placeholder' => 'Username']) }}
                                 </div>
+                                {{ $errors->first('username', '<span class="help-block text-danger no-bottom-margin">:message</span>') }}
                             </div>
+                            <div class="clearfix visible-sm"></div>
                             <div class="form-group col-xs-12 col-sm-6 col-md-3">
                                 {{ Form::label('password', 'Password:', ['class' => 'control-label']) }}
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                                    {{ Form::password('password', ['class' => 'form-control', 'placeholder' => 'Password', 'required' => 'required']) }}
+                                    {{ Form::password('password', ['class' => 'form-control', 'placeholder' => 'Password']) }}
                                 </div>
+                                {{ $errors->first('password', '<span class="help-block text-danger no-bottom-margin">:message</span>') }}
                             </div>
                             <div class="form-group col-xs-12 col-sm-6 col-md-3">
-                                {{ Form::label('passwordConfirm', 'Confirm password:', ['class' => 'control-label']) }}
+                                {{ Form::label('passwordConfirmation', 'Confirm password:', ['class' => 'control-label']) }}
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                                    {{ Form::password('passwordConfirm', ['class' => 'form-control', 'placeholder' => 'Password', 'required' => 'required']) }}
+                                    {{ Form::password('passwordConfirmation', ['class' => 'form-control', 'placeholder' => 'Password']) }}
                                 </div>
+                                {{ $errors->first('passwordConfirmation', '<span class="help-block text-danger no-bottom-margin">:message</span>') }}
                             </div>
+                            <div class="clearfix visible-lg"></div>
                             <div class="form-group col-xs-12 col-sm-6">
                                 {{ Form::label('keyword', 'Keyword:', ['class' => 'control-label']) }}
                                 <div class="input-group">
@@ -56,7 +62,8 @@
                             </div>
                             <div class="form-group col-xs-12 col-sm-6">
                                 {{ Form::label('publicKey', 'Public key:', ['class' => 'control-label']) }}
-                                {{ Form::text('publicKey', null,['class' => 'form-control', 'placeholder' => 'PublicKey', 'required' => 'required', 'readonly' => 'readonly']) }}
+                                {{ Form::text('publicKey', null,['class' => 'form-control', 'placeholder' => 'PublicKey', 'readonly' => 'readonly']) }}
+                                {{ $errors->first('publicKey', '<span class="help-block text-danger no-bottom-margin">:message</span>') }}
                             </div>
                             <div class="form-group col-xs-12 no-bottom-margin">
                                 {{ Form::label('privateKey', 'Private key:', ['class' => 'control-label']) }}
@@ -68,7 +75,7 @@
                                         </button>
                                     </span>
                                 </div>
-                                <span class="help-block text-danger text-center">Save your private key and do not show to anyone!</span>
+                                <span class="help-block text-primary text-center">Save your private key and do not show to anyone!</span>
                             </div>
                             <div class="form-group col-xs-12">
                                 <button type="submit" class="btn btn-success pull-right" id="submitBtn" disabled>Register&nbsp;<i class="fa fa-arrow-right"></i></button>

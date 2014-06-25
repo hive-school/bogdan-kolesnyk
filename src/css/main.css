@@ -63,7 +63,7 @@ textarea {
     padding-bottom: 15px;
 }
 
-#sidebarMenu li span, #username span {
+#sidebarMenu li span, .username span {
     margin-left: 15px;
 }
 .message-del-btn {
@@ -107,7 +107,9 @@ textarea {
 li .btn-group-sm {
     margin-top: 4px;
 }
-
+li:hover .text-danger {
+    color: #ff4136!important;
+}
 .btn {
     outline: none !important;
 }

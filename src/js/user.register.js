@@ -1,4 +1,5 @@
 $(function(){
+
     var dfd = $.Deferred(),
         keygenBtn = $('#keygenBtn'),
         submitBtn = $('#submitBtn'),
@@ -8,6 +9,9 @@ $(function(){
         publicKey = $('#publicKey'),
         privateKey = $('#privateKey');
 
+    if (publicKey.val()) {
+        publicKey.val('');
+    }
 
     keygenBtn.on('click', function(){
         LOADER();
