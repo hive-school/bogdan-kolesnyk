@@ -7,30 +7,30 @@
             @include('partial/sidebarMenu')
         </aside>
         <main class="col-sm-9 col-lg-10" id="userMessagesMain">
-            <form>
+            {{ Form::open(['route' => 'message.store']) }}
                 <section class="panel panel-default">
                     <header class="panel-heading no-bottom-padding">
                         <div class="row">
                             <div class="form-group col-xs-12 col-sm-5 col-md-4 col-lg-3">
-                                <label class="control-label hidden-xs">To:</label>
-                                <select class="form-control">
-                                    <option disabled selected>Choose receiver</option>
-                                    <option><i class="fa fa-user">&nbsp;Mr.Black</option>
-                                    <option><i class="fa fa-user">&nbsp;Mr.Green</option>
-                                    <option><i class="fa fa-user">&nbsp;Mr.Yellow</option>
-                                    <option><i class="fa fa-user">&nbsp;Mr.Lime</option>
-                                </select>
+                                {{ Form::label('receiver', 'To:', ['class' => 'control-label']) }}
+                                {{
+                                    Form::select('receiver',
+                                        array_merge(['default' => 'Select receiver'],['A' => 'AA', 'B' => 'BB']),
+                                        'default',
+                                        ['class' => 'form-control', 'placeholder' => 'Select receiver']
+                                    )
+                                }}
                             </div>
                             <div class="form-group col-xs-12 col-sm-7 col-md-8 col-lg-9">
-                                <label class="control-label hidden-xs">Subject:</label>
+                                {{ Form::label('subject', 'Subject:', ['class' => 'control-label']) }}
                                 <input type="text" class="form-control" placeholder="Message subject">
                             </div>
                         </div>
                     </header>
                     <article class="panel-body no-bottom-padding">
                         <div class="form-group">
-                            <label class="control-label hidden-xs">Message:</label>
-                            <textarea class="form-control wysiwyg"></textarea>
+                            {{ Form::label('message', 'Message:', ['class' => 'control-label']) }}
+                            {{ Form::textarea('message', null, ['class' => 'wysiwyg']) }}
                         </div>
                         <div class="form-group">
                             <label class="control-label hidden-xs">Encrypted message:</label>

@@ -9,7 +9,7 @@ class ContactController extends \BaseController {
 	 */
 	public function index()
 	{
-        return View::make('contact.showAll');
+        return View::make('contact.show');
 	}
 
 
@@ -31,7 +31,22 @@ class ContactController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		$validation = Validator::make(Input::all(), [
+            'contactEmail' => 'required | email'
+        ]);
+
+        if($validation->fails()) {
+            Redirect::back()->withInput()->withErrors($validation->messages());
+        }
+
+        $invitee = User::where('email', '=', Input::get('contactEmail'))->limit(1)->get();
+
+        Contact::create([
+            'inviter' => Auth::user()->id,
+            'invitee' => $invitee[0]->id
+        ]);
+
+        return Redirect::back();
 	}
 
 

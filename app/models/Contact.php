@@ -6,7 +6,9 @@
  * Time: 23:37
  */
 
-class Connection extends Eloquent {
+class Contact extends Eloquent {
+
+    protected $fillable = ['inviter', 'invitee'];
 
     public function inviter () {
         return $this->belongsTo('User', 'inviter');
